@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto';
+    background: url('https://cdn.ipadizate.com/2024/06/ios-18-rosa-claro.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* lock screen */
+
+.lock-screen {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.pinimg.com/736x/b8/69/2a/b8692ab79d12addbf2a902ec93149b5d.jpg') center no-repeat;
+}
+
+.lock-container {
+    width: 80%;
+    height: 80%;
+}
+
+.date-time h2 {
+    font-size: 80px;
+    color: rgba(127, 255, 212, 0.7);
+}
+
+.date-time h3 {
+    margin-left: 12px;
+    color: aliceblue;
+    text-shadow: 0 0 5px black;
+}
+
+.lock-notification {
+    border-radius: 30px;
+    margin-top: 50px;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+}
+
+.head i {
+    color: aliceblue;
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.message {
+    display: flex;
+}
+
+
+
+/* main site */
+
+header {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification {
+    display: flex;
+    gap: 15px;
+}
+
+.notification i {
+    color: rgb(90, 90, 90);
+}
+
+.time h3 {
+    color: rgb(90, 90, 90);
+}
+
+.info {
+    display: flex;
+    gap: 15px;
+}
+
+.info i {
+    color: rgb(90, 90, 90);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+}
+
+.fa-caret-left {
+    font-size: 25px;
+}
+
+footer i {
+    color: aliceblue;
+}
+
+.apps {
+    margin-top: 20px;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.app {
+    width: calc(25% - 20px)
+}
+
+.app a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.app img{
+    width: 60px;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.app h5 {
+    margin-top: 10px;
+    color: aliceblue;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
+
+.app:nth-child(1) img{
+    background-color: lightgreen;
+}
+
+.app:nth-child(2) img{
+    background-color: lightcoral;
+}
+
+.app:nth-child(3) img{
+    background-color: lightcyan;
+}
+
+.app:nth-child(4) img{
+    background-color: lightgreen;
+}
