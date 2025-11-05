@@ -49,8 +49,15 @@ setInterval(updateDateTime, 10000);
 /* notification panel */
 
 const notifPanel = document.querySelector('.notification-panel');
+const header =document.querySelector('.main-site header')
+
+
 let sY = 0;
 let endY = 0;
+
+header.addEventListener('click', ()=>{
+    notifPanel.classList.add('active')
+})
 
 // para touch
 document.addEventListener('touchstart', e => {
