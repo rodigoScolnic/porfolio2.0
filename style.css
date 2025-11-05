@@ -245,3 +245,134 @@ footer i {
   transform: translateY(-110%);
   opacity: 0;
 }
+
+/* notification panel */
+
+.notification-panel.active {
+    background-color: black;
+    transform: translateY(1000px);
+    transition: all .5s;
+}
+
+.notification-panel {
+    position: absolute;
+    z-index: 2;
+    top: -1000px;
+    transition: all .5s;
+    width: 100%;
+    height: 100%;
+}
+
+.notification-panel h3, .notification-panel i  {
+    color: aliceblue;
+}
+
+.noti-options {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.options {
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    background-color: lightgray;   
+    flex: 1 1 calc(50% - 1rem);
+    transition: all .5s;
+}
+
+.options i {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: black;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.options.animate{
+    background-color: aquamarine;
+}
+
+.options i.animate {
+    animation: rotateAnim .5s forwards;
+}
+
+@keyframes rotateAnim {
+    0% { transform: rotate(0deg) scale(1); opacity: 1; }
+    50% { transform: rotate(180deg) scale(0.7); opacity: 0; }
+    100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+
+.options p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.icon-container {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- */
+
+.see-noti {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    height: calc(100vh - 199px);
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+.noti-container {
+    border-radius: 20px;
+    position: absolute;
+    width: 90%;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.top-noti {
+    display: flex;
+}
+
+.noti-title p {
+    font-weight: bold;
+}
+
+.noti-content {
+    margin-top: 10px;
+}
+
+.right-noti {
+    margin-left: 20px;
+}
+
+.left-noti img{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.bottom-noti {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.bottom-noti a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
