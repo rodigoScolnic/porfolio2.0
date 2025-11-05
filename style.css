@@ -111,9 +111,22 @@ body {
     text-shadow: 0 0 5px black;
 }
 
+.main-site {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.8s ease;
 
+}
 
 /* main site */
+
+.main-site {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 header {
     width: 100%;
@@ -151,6 +164,9 @@ footer {
     justify-content: space-around;
     position: absolute;
     bottom: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .6s ease;
 }
 
 .fa-caret-left {
@@ -158,6 +174,7 @@ footer {
 }
 
 footer i {
+
     color: aliceblue;
 }
 
@@ -211,4 +228,18 @@ footer i {
 
 .app:nth-child(4) img{
     background-color: lightgreen;
+}
+
+.main-site.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-site.active + footer {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lock-screen.hidden {
+  transform: translateY(-100%);
 }
