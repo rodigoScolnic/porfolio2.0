@@ -16,15 +16,8 @@
 @keyframes chibi-float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-10px) rotate(-4deg)}}
 @media(max-width:650px){.portrait-frame{width:145px;height:180px;right:4px;bottom:9px}.chibi-bubble{width:63px;height:63px;left:0;bottom:28px}.chibi-bubble span{font-size:27px}.contact-chibi{font-size:100px}}
 
-/* Retrato y chibis personales */
+
+/* Retrato principal: sin deformar la fotografía */
 .portrait-frame{width:205px;height:255px;right:0;bottom:12px;transform:rotate(2deg);border-radius:28px;padding:6px;background:linear-gradient(145deg,#a78bfa,#67e8f9,#fb7185)}
 .portrait-frame img{object-fit:cover;object-position:center 32%;border-radius:21px}
-.chibi-bubble{width:112px;height:125px;left:0;bottom:22px;padding:7px;background:linear-gradient(145deg,#30234a,#191827);border-radius:22px;overflow:hidden}
-.chibi-bubble img{width:100%;height:calc(100% - 18px);object-fit:contain;filter:drop-shadow(0 7px 10px #0008)}
-.chibi-bubble small{font-size:9px;line-height:1}
-.contact-chibi{position:relative;width:210px;height:220px;object-fit:contain;filter:drop-shadow(0 15px 20px #0007);animation:chibi-float 3s ease-in-out infinite}
-@media(max-width:650px){
- .portrait-frame{width:148px;height:185px;right:2px;bottom:8px}
- .chibi-bubble{width:88px;height:100px;left:0;bottom:17px}
- .contact-chibi{width:175px;height:180px}
-}
+@media(max-width:650px){.portrait-frame{width:148px;height:185px;right:2px;bottom:8px}}
