@@ -1,180 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ec74e78deb.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10101b">
+  <meta name="description" content="Portfolio de Rodrigo Scolnic — desarrollador web full stack. Proyectos, habilidades y contacto.">
+  <title>Rodrigo Scolnic | Desarrollador Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ec74e78deb.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-mark">R<span>.</span></span><span>RODRIGO SCOLNIC</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#sobre-mi">Sobre mí</a><a href="#habilidades">Habilidades</a><a href="#proyectos">Proyectos</a><a href="#contacto" class="nav-cta">Hablemos <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </nav>
+  </header>
 
-    <!-- lock screen -->
-
-    <section class="lock-screen">
-        <div class="lock-container">
-            <div class="date-time">
-                <h2 class="realtime">12:00</h2>
-                <h3 class="realdate">Wed, Nov 5</h3>
-            </div>
-            <div class="lock-notification">
-                <div class="head">
-                    <i class="fa-solid fa-message"></i>
-                    <p>Messages</p>
-                </div>
-                <div class="message">
-                    <i class="fa-solid fa-user"></i>
-                    <div class="message-content">
-                        <p style="font-weight: bold;">Rodrigo</p>
-                        <p>Welcome to my Portfolio</p>
-                    </div>
-                </div>
-            </div>
-            <div class="lock-icon">
-                <i class="fa-solid fa-unlock"></i>
-                <p>Swipe up to unlock</p>
-            </div>
-        </div>  
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> DISPONIBLE PARA NUEVOS PROYECTOS</div>
+        <p class="hero-kicker">¡Hola! Soy Rodrigo 👋</p>
+        <h1>Transformo ideas en<br><span class="gradient-text">experiencias digitales.</span></h1>
+        <p class="hero-description">Desarrollador web con foco en crear soluciones funcionales, atractivas y pensadas para personas reales. Del primer boceto al último detalle.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos">Ver proyectos <i class="fa-solid fa-arrow-down"></i></a>
+          <a class="button button-ghost" href="https://github.com/rodigoScolnic" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> Mi GitHub</a>
+        </div>
+        <div class="hero-meta"><span><i class="fa-solid fa-code"></i> Full Stack Developer</span><span><i class="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-card">
+          <div class="card-top"><span></span><span></span><span></span><small>rodrigo.dev</small></div>
+          <div class="code-lines"><p><b>const</b> developer = {</p><p class="indent">name: <em>'Rodrigo'</em>,</p><p class="indent">focus: <em>'Full Stack'</em>,</p><p class="indent">mindset: <em>'Create &amp; improve'</em></p><p>};</p><p class="code-comment">// siempre aprendiendo ✦</p></div>
+          <div class="card-bottom"><span><i class="fa-solid fa-circle-check"></i> Building something good</span><span>01 / 04</span></div>
+        </div>
+        <div class="float-tag tag-top"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="float-tag tag-bottom"><i class="fa-solid fa-wand-magic-sparkles"></i> Ideas → Código</div>
+        <div class="chibi-frame" aria-label="Ilustración chibi de Rodrigo">
+          <img src="https://raw.githubusercontent.com/rodigoScolnic/imagenes/master/chibi-mascots.png" alt="Chibi de Rodrigo saludando" onerror="this.style.display='none';this.parentElement.classList.add('chibi-fallback')">
+          <span class="chibi-fallback-face" aria-hidden="true">👨🏻‍💻</span>
+        </div>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span>
+      </div>
+      <a class="scroll-cue" href="#sobre-mi"><span></span> SCROLL PARA EXPLORAR</a>
     </section>
 
-    <!-- main site -->
-    <div class="main-site">
-        <header>
-            <div class="notification">
-                <div class="time">
-                    <h3 class="realtime">12:30</h3>
-                </div>
-                <div class="other-notification">
-                    <h3><i class="fa-solid fa-circle-down"></i></h3>
-                </div>
-            </div>
-            <div class="info">
-                <div class="wifi-bar">
-                    <h3><i class="fa-solid fa-wifi"></i></h3>
-                </div>
-                <div class="signal">
-                    <h3><i class="fa-solid fa-signal"></i></h3>
-                </div>
-                <div class="battery">
-                    <h3><i class="fa-solid fa-battery-three-quarters"></i></h3>
-                </div>
-            </div>
-        </header>
+    <section class="intro section-wrap reveal" id="sobre-mi">
+      <div class="section-label"><span>01</span> / UN POCO SOBRE MÍ</div>
+      <div class="intro-grid">
+        <h2>Me gusta resolver<br>problemas con <span class="gradient-text">código.</span></h2>
+        <div class="intro-text"><p>Combino mi experiencia en atención al cliente y ventas con mi pasión por la tecnología. Eso me ayuda a entender no solo cómo construir un producto, sino también para quién y para qué.</p><p>Disfruto aprender, experimentar y convertir necesidades concretas en herramientas simples de usar.</p><a class="text-link" href="#contacto">¿Tenés una idea? Hablemos <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+      </div>
+      <div class="value-strip"><div><strong>01</strong><span>Curiosidad constante</span></div><div><strong>02</strong><span>Enfoque en el usuario</span></div><div><strong>03</strong><span>Aprendizaje práctico</span></div></div>
+    </section>
 
-        <section class="apps">
-            <div class="app">
-                <a href="">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2622/2622682.png" alt="Skills">
-                    <h5>Skills</h5>
-                </a>
-            </div>
-            <div class="app">
-                <a href="">
-                    <img src="https://cdn-icons-png.flaticon.com/512/7766/7766332.png" alt="about me">
-                    <h5>Sobre mi</h5>
-                </a>
-            </div>
-            <div class="app">
-                <a href="">
-                    <img src="https://cdn-icons-png.freepik.com/512/10655/10655913.png" alt="Work">
-                    <h5>Work</h5>
-                </a>
-            </div>
-            <div class="app">
-                <a href="">
-                    <img src="https://i.pinimg.com/564x/bf/8a/76/bf8a76719f900b8757154eb3cfbc844a.jpg" alt="Contact">
-                    <h5>Contact</h5>
-                </a>
-            </div>
-        </section>
-    </div>
+    <section class="skills-section section-wrap reveal" id="habilidades">
+      <div class="section-label"><span>02</span> / CAJA DE HERRAMIENTAS</div>
+      <div class="section-heading"><h2>Herramientas para<br><span class="gradient-text">crear y construir.</span></h2><p>Tecnologías que utilizo para desarrollar experiencias web completas.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card skill-featured"><div class="skill-icon"><i class="fa-brands fa-js"></i></div><h3>JavaScript</h3><p>Interactividad, lógica de negocio y desarrollo del lado del servidor.</p><span class="skill-level">TECNOLOGÍA PRINCIPAL</span></article>
+        <article class="skill-card"><div class="skill-icon violet"><i class="fa-brands fa-node-js"></i></div><h3>Node.js / Express</h3><p>APIs, rutas y aplicaciones backend.</p></article>
+        <article class="skill-card"><div class="skill-icon orange"><i class="fa-solid fa-database"></i></div><h3>SQL / MySQL</h3><p>Modelado, consultas y gestión de datos.</p></article>
+        <article class="skill-card"><div class="skill-icon pink"><i class="fa-brands fa-html5"></i></div><h3>HTML &amp; CSS</h3><p>Interfaces responsive, semánticas y cuidadas.</p></article>
+        <article class="skill-card"><div class="skill-icon blue"><i class="fa-brands fa-git-alt"></i></div><h3>Git &amp; GitHub</h3><p>Control de versiones y trabajo con repositorios.</p></article>
+        <article class="skill-card"><div class="skill-icon green"><i class="fa-solid fa-layer-group"></i></div><h3>MVC / Sequelize</h3><p>Arquitectura, modelos y organización de proyectos.</p></article>
+      </div>
+      <div class="learning-note"><span class="pulse-ring"></span><p><b>Siempre en evolución.</b> Actualmente profundizando mis conocimientos y sumando nuevas herramientas a mi stack.</p></div>
+    </section>
 
-        
+    <section class="projects-section section-wrap reveal" id="proyectos">
+      <div class="section-label"><span>03</span> / TRABAJOS SELECCIONADOS</div>
+      <div class="section-heading projects-heading"><h2>Ideas que ya están<br><span class="gradient-text">tomando forma.</span></h2><p>Una selección de proyectos donde pongo en práctica diseño, lógica y desarrollo.</p></div>
+      <div class="projects-grid">
+        <article class="project-card project-codexa">
+          <div class="project-visual visual-codexa"><div class="browser-bar"><i></i><i></i><i></i><span>codexa</span></div><div class="visual-content"><span class="visual-overline">DIGITAL SOLUTIONS</span><strong>Ideas que<br>se vuelven<br><b>realidad.</b></strong><div class="visual-pill">CODExA / 01</div></div><span class="visual-orb"></span></div>
+          <div class="project-info"><div class="project-title-row"><h3>Codexa</h3><span class="project-number">01</span></div><p>Landing page para un estudio digital enfocado en desarrollo web, automatización y soluciones tecnológicas.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="https://codexa-web-kj03.onrender.com/" target="_blank" rel="noreferrer" class="project-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </article>
+        <article class="project-card project-verde">
+          <div class="project-visual visual-verde"><div class="browser-bar"><i></i><i></i><i></i><span>verdebendito</span></div><div class="plant-shape plant-one"></div><div class="plant-shape plant-two"></div><div class="verde-title">verde<span>bendito.</span><small>UN POCO MÁS VERDE, TODOS LOS DÍAS</small></div><span class="visual-sticker">GROW<br>GOOD</span></div>
+          <div class="project-info"><div class="project-title-row"><h3>VerdeBendito</h3><span class="project-number">02</span></div><p>E-commerce de plantas con catálogo de productos y una experiencia de compra clara y amigable.</p><div class="project-tags"><span>Node.js</span><span>Express</span><span>Sequelize</span><span>MySQL</span></div><a href="https://verdebendito.onrender.com/" target="_blank" rel="noreferrer" class="project-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </article>
+        <article class="project-card project-burger">
+          <div class="project-visual visual-burger"><div class="browser-bar"><i></i><i></i><i></i><span>alta burger</span></div><div class="burger-copy"><small>BUILD YOUR OWN</small><strong>MAKE IT<br><em>YOUR WAY.</em></strong><span>ALTA BURGER · 03</span></div><div class="burger-illustration">🍔</div><span class="burger-star">★</span></div>
+          <div class="project-info"><div class="project-title-row"><h3>Alta Burger</h3><span class="project-number">03</span></div><p>Demo frontend de una hamburguesería: personalización de burgers por ingredientes y flujo de compra interactivo.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="https://alta-burger.onrender.com/" target="_blank" rel="noreferrer" class="project-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </article>
+      </div>
+    </section>
 
-        <footer>
-            <a href=""><i class="fa-solid fa-caret-left"></i></a>
-            <a href=""><i class="fa-solid fa-circle"></i></a>
-            <a href=""><i class="fa-solid fa-square"></i></a>
-        </footer>
-
-        <div class="notification-panel">
-            <div class="notification-content">
-                <header>
-                    <div class="notification">
-                        <div class="time">
-                            <h3 class="realtime">12:30</h3>
-                        </div>
-                        <div class="other-notification">
-                            <h3 class="realdate"></h3>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <div class="wifi-bar">
-                            <h3><i class="fa-solid fa-wifi"></i></h3>
-                        </div>
-                        <div class="signal">
-                            <h3><i class="fa-solid fa-signal"></i></h3>
-                        </div>
-                        <div class="battery">
-                            <h3><i class="fa-solid fa-battery-three-quarters"></i></h3>
-                        </div>
-                    </div>
-                </header>
-                <div class="noti-options">
-                    <div class="options">
-                        <div class="icon-container">
-                          <i class="fa-solid fa-sun"></i>  
-                        </div>
-                        <p>Change Mode</p>
-                    </div>
-                    <div class="options">
-                        <div class="icon-container">
-                          <i class="fa-solid fa-sun"></i>  
-                        </div>
-                        <p>Change Mode</p>
-                    </div>
-                    <div class="options">
-                        <div class="icon-container">
-                          <i class="fa-solid fa-sun"></i>  
-                        </div>
-                        <p>Change Mode</p>
-                    </div>
-                    <div class="options">
-                        <div class="icon-container">
-                          <i class="fa-solid fa-sun"></i>  
-                        </div>
-                        <p>Change Mode</p>
-                    </div>
-                </div>
-                <div class="see-noti">
-                    <div class="noti-container">
-                        <div class="top-noti">
-                            <div class="left-noti">
-                                <img src="foto.jpg" alt="">
-                            </div>
-                            <div class="right-noti">
-                                <div class="noti-title">
-                                    <p>Rodrigo</p>
-                                </div>
-                                <div class="noti-content">
-                                    <p>I've updated my profile.</p>
-                                    <p>Take a look!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bottom-noti">
-                            <a href="">Reply</a>
-                            <a href="">Mark as read</a>
-                            <a href="">Mute</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-  
-    <script src="script.js"></script>
+    <section class="contact-section section-wrap reveal" id="contacto">
+      <div class="contact-card">
+        <div class="contact-glow"></div><div class="section-label"><span>04</span> / EL PRÓXIMO PASO</div>
+        <div class="contact-content"><div><p class="hero-kicker">¿Tenés algo en mente?</p><h2>Hagamos que<br><span class="gradient-text">suceda.</span></h2><p>Estoy abierto a nuevos desafíos, colaboraciones y oportunidades para crear algo interesante.</p><a class="button button-primary" href="mailto:codexa.techco@gmail.com?subject=Contacto%20desde%20el%20portfolio">Escribime <i class="fa-solid fa-paper-plane"></i></a></div><div class="contact-mascot"><img src="https://raw.githubusercontent.com/rodigoScolnic/imagenes/master/chibi-mascots.png" alt="Chibi de Rodrigo apuntando al contacto" onerror="this.style.display='none';this.parentElement.classList.add('chibi-fallback')"><span class="chibi-fallback-face" aria-hidden="true">👋</span><span class="speech-bubble">¡Hablemos!</span></div></div>
+        <div class="contact-bottom"><a href="https://github.com/rodigoScolnic" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a><span>Buenos Aires, Argentina</span><span>© <span id="year"></span> Rodrigo Scolnic</span></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Diseñado y desarrollado con <b>♥</b> y mucho café (a veces).</span><a href="#inicio">Volver arriba ↑</a></footer>
+  <script src="script.js"></script>
 </body>
 </html>
