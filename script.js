@@ -1,99 +1,32 @@
-const lock = document.querySelector('.lock-screen')
-const main = document.querySelector('.main-site')
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
 
-let startY = 0;
-
-document.addEventListener('touchstart', e => {
-  startY = e.touches[0].clientY;
+menuToggle?.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
 });
 
-document.addEventListener('touchend', e => {
-  const endY = e.changedTouches[0].clientY;
-  if (startY - endY > 100) { // si desliza hacia arriba
-    lock.classList.add('hidden');
-    setTimeout(() => main.classList.add('active'), 400);
-  }
-});
-
-/*--------*/
-
-function updateDateTime() {
-  const now = new Date();
-
-  // hora (12:05)
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const timeString = `${hours}:${minutes}`;
-
-  // fecha (Wed, Nov 5)
-  const options = { weekday: 'short', month: 'short', day: 'numeric' };
-  const dateString = now.toLocaleDateString('en-US', options);
-
-  // actualiza todas las clases .realtime
-  document.querySelectorAll('.realtime').forEach(el => {
-    el.textContent = timeString;
-  });
-
-  // actualiza todas las clases .realdate
-  document.querySelectorAll('.realdate').forEach(el => {
-    el.textContent = dateString;
-  });
-}
-
-// ejecuta una vez al cargar
-updateDateTime();
-
-// y cada 10 segundos
-setInterval(updateDateTime, 10000);
-
-/* notification panel */
-
-const notifPanel = document.querySelector('.notification-panel');
-const header =document.querySelector('.main-site header')
-
-
-let sY = 0;
-let endY = 0;
-
-header.addEventListener('click', ()=>{
-    notifPanel.classList.add('active')
-})
-
-// para touch
-document.addEventListener('touchstart', e => {
-  sY = e.touches[0].clientY;
-});
-
-document.addEventListener('touchend', e => {
-  endY = e.changedTouches[0].clientY;
-
-  if (endY - sY > 100 && !notifPanel.classList.contains('active')) {
-    // desliza hacia abajo → abre panel
-    notifPanel.classList.add('active');
-  } else if (sY - endY > 100 && notifPanel.classList.contains('active')) {
-    // desliza hacia arriba → cierra panel
-    notifPanel.classList.remove('active');
-  }
-});
-
-/* menu opciones */
-
-const option = document.querySelector('.options')
-const icon = option.querySelector('i');
-
-option.addEventListener('click', ()=>{
-
-    if(icon.classList.contains('fa-sun')){
-        icon.classList.replace('fa-sun', 'fa-moon')
-    } else {
-        icon.classList.replace('fa-moon' , 'fa-sun')
+mainNav?.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
     }
+  });
+});
 
-    icon.classList.add('animate');
-    option.classList.toggle('animate');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-    icon.addEventListener('animationend', () => {
-        icon.classList.remove('animate');
-    }, { once: true });
-
-})
+document.querySelectorAll('.reveal').forEach(section => observer.observe(section));
+document.querySelector('#year').textContent = new Date().getFullYear();
